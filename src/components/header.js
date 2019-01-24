@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import logo from '../imgs/logo_header.gif'
 
 const Header = ({ siteTitle, favicon }) => (
   <div
@@ -24,7 +25,7 @@ const Header = ({ siteTitle, favicon }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <img src={logo} />
         </Link>
       </h1>
       <ul style={{ listStyleType: 'none', marginLeft: '1em', float: 'right', }}>

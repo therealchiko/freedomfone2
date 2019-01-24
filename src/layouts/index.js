@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
 import favicon from '../imgs/favicon.ico';
+import twitter from '../imgs/follow_us.gif';
+import download from '../imgs/download.gif';
 
 const Layout = ({ children, data }) => (
   <div>
@@ -22,12 +24,35 @@ const Layout = ({ children, data }) => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        width: 960,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
     >
+      <div style={{
+        width: 690,
+        float: 'left'
+      }}>
       {children()}
+      </div>
+      <div
+      style={{
+        float: 'left',
+        padding: '0 0.1rem'
+      }}
+      >
+      <h3>Quick Links</h3>
+        <div>
+        <a href="https://twitter.com/freedomfone">
+          <img src={twitter} />
+        </a>
+        </div>
+        <div>
+        <a href="/downloads">
+          <img src={download} />
+        </a>
+        </div>
+      </div>
     </div>
   </div>
 )
